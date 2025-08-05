@@ -8,22 +8,24 @@
 
 @layer base {
   :root {
-    /* ZAROS Brand Colors - Paleta nude, preto, branco, bege */
+    /* ZAROS Brand Colors - Paleta escura */
     --nude: 37 20% 94%; /* #F7F2EF */
     --beige: 30 35% 72%; /* #EBCBAF */
     --bronze: 20 38% 53%; /* #BC7E53 */
     --black: 0 0% 0%; /* #000000 */
     --white: 0 0% 100%;
+    --dark-bg: 0 0% 8%; /* #141414 */
+    --dark-card: 0 0% 12%; /* #1F1F1F */
     
-    /* Semantic tokens - 60/30/10 rule */
-    --background: var(--nude); /* 60% - Background principal */
-    --foreground: var(--black);
+    /* Semantic tokens - Dark theme by default */
+    --background: var(--dark-bg); /* Fundo escuro principal */
+    --foreground: var(--white);
     
-    --card: var(--white);
-    --card-foreground: var(--black);
+    --card: var(--dark-card);
+    --card-foreground: var(--white);
     
-    --popover: var(--white);
-    --popover-foreground: var(--black);
+    --popover: var(--dark-card);
+    --popover-foreground: var(--white);
     
     /* Primary (30%) - Cor primária da logo */
     --primary: var(--bronze);
@@ -32,18 +34,18 @@
     --secondary: var(--beige);
     --secondary-foreground: var(--black);
     
-    --muted: var(--beige);
-    --muted-foreground: var(--black);
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 80%;
     
     /* Accent (10%) - Cor de destaque */
-    --accent: var(--nude);
-    --accent-foreground: var(--black);
+    --accent: 0 0% 15%;
+    --accent-foreground: var(--white);
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: var(--white);
     
-    --border: var(--beige);
-    --input: var(--white);
+    --border: 0 0% 25%;
+    --input: var(--dark-card);
     --ring: var(--bronze);
     
     --radius: 0.75rem;

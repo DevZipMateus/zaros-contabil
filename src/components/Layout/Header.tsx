@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-sm py-3 border-b border-border' : 'bg-background py-4'}`}>
       {/* Top Bar with Contact Info and Social Media */}
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
@@ -81,7 +81,7 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-600 hover:text-amber-500 focus:outline-none"
+            className="md:hidden text-muted-foreground hover:text-primary focus:outline-none"
             onClick={toggleMobileMenu}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -90,8 +90,8 @@ const Header = () => {
       </div>
       
       {/* Mobile Navigation Menu */}
-      <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
-        <div className="container-custom py-4 flex flex-col space-y-3 border-t mt-4">
+      <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out bg-background`}>
+        <div className="container-custom py-4 flex flex-col space-y-3 border-t border-border mt-4">
           <Link to="/" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Início</Link>
           <a href="#about" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Sobre</a>
           <a href="#services" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Serviços</a>

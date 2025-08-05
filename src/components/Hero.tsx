@@ -5,7 +5,7 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-black via-neutral-900 to-neutral-800 relative overflow-hidden">
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-background relative overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-5"></div>
       
@@ -24,18 +24,18 @@ const Hero = () => {
             />
           </div>
           
-          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} 
+          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-foreground leading-tight mb-6 animate-fade-in`} 
               style={{ animationDelay: '0.1s' }}>
             MAIS QUE NÚMEROS,<br />
             <span className="text-primary">SOLUÇÕES EFICAZ EM CONTABILIDADE</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-4 animate-fade-in font-light" 
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in font-light" 
              style={{ animationDelay: '0.2s' }}>
             Assessoria completa para o sucesso do seu negócio
           </p>
           
-          <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto animate-fade-in" 
+          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" 
              style={{ animationDelay: '0.3s' }}>
             Somos especialistas em contabilidade, fiscal, tributário e gestão empresarial, 
             oferecendo soluções personalizadas para cada tipo de empreendimento.
@@ -62,7 +62,7 @@ const Hero = () => {
       {/* Wave decoration with brand color */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="w-full h-auto">
-          <path fill="hsl(37, 20%, 94%)" fillOpacity="1" d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,53.3C1120,43,1280,21,1360,10.7L1440,0L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z">
+          <path fill="hsl(0, 0%, 8%)" fillOpacity="1" d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,53.3C1120,43,1280,21,1360,10.7L1440,0L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z">
           </path>
         </svg>
       </div>

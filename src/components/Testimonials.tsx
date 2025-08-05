@@ -41,17 +41,17 @@ const Testimonials = () => {
   };
   
   return (
-    <section className="section bg-white">
+    <section className="section bg-background">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-4 py-1.5 rounded-full text-sm mb-4">
+          <div className="inline-block bg-primary/10 text-primary font-medium px-4 py-1.5 rounded-full text-sm mb-4">
             Depoimentos
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             O que nossos clientes dizem
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-muted-foreground text-lg">
             Conheça a experiência de quem já utiliza nossos serviços e confia em nossa expertise.
           </p>
         </div>
@@ -60,11 +60,11 @@ const Testimonials = () => {
         <div className="max-w-4xl mx-auto relative">
           {/* Testimonial Card */}
           <div 
-            className="relative bg-white rounded-xl p-8 md:p-10 shadow-sm animate-fade-in"
+            className="relative bg-card rounded-xl p-8 md:p-10 shadow-sm animate-fade-in border border-border"
             key={testimonials[activeIndex].id}
           >
             {/* Quotation Mark */}
-            <div className="absolute -top-6 left-8 text-6xl text-corporate-blue/20">"</div>
+            <div className="absolute -top-6 left-8 text-6xl text-primary/20">"</div>
             
             {/* Content */}
             <div className="flex flex-col md:flex-row gap-8">
@@ -77,8 +77,8 @@ const Testimonials = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 text-center">{testimonials[activeIndex].name}</h4>
-                <p className="text-sm text-gray-600 text-center">{testimonials[activeIndex].position}</p>
+                <h4 className="text-lg font-semibold text-card-foreground text-center">{testimonials[activeIndex].name}</h4>
+                <p className="text-sm text-muted-foreground text-center">{testimonials[activeIndex].position}</p>
                 
                 {/* Rating */}
                 <div className="flex justify-center mt-2">
@@ -90,7 +90,7 @@ const Testimonials = () => {
               
               {/* Testimonial Text */}
               <div className="md:w-3/4">
-                <p className="text-gray-600 text-lg italic mb-6">
+                <p className="text-muted-foreground text-lg italic mb-6">
                   "{testimonials[activeIndex].content}"
                 </p>
               </div>
@@ -101,7 +101,7 @@ const Testimonials = () => {
           <div className="flex justify-center mt-8 space-x-4">
             <button 
               onClick={prevTestimonial}
-              className="p-2 rounded-full bg-gray-100 hover:bg-corporate-blue/10 text-gray-600 hover:text-corporate-blue transition-colors duration-300"
+              className="p-2 rounded-full bg-accent hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="Previous testimonial"
             >
               <ArrowLeft size={20} />
@@ -114,7 +114,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    activeIndex === index ? 'bg-corporate-blue w-6' : 'bg-gray-300'
+                    activeIndex === index ? 'bg-primary w-6' : 'bg-muted'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -123,7 +123,7 @@ const Testimonials = () => {
             
             <button 
               onClick={nextTestimonial}
-              className="p-2 rounded-full bg-gray-100 hover:bg-corporate-blue/10 text-gray-600 hover:text-corporate-blue transition-colors duration-300"
+              className="p-2 rounded-full bg-accent hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="Next testimonial"
             >
               <ArrowRight size={20} />
