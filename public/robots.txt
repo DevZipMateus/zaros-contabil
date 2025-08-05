@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /_next/
+Disallow: /api/
+
+Sitemap: https://zarosassessoriacontabil.com.br/sitemap.xml

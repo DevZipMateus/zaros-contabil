@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, Facebook, Instagram, Twitter, Linkedin, Menu, X } from 'lucide-react';
+import { Mail, Phone, Instagram, MessageCircle, Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
 
 const Header = () => {
@@ -34,30 +34,30 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
           {/* Contact Information */}
-          <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-gray-600 mb-2 md:mb-0 items-center">
-            <a href="mailto:contato@contabilidade.com" className="flex items-center hover:text-amber-500 transition-colors duration-300 mb-1 md:mb-0">
+          <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-foreground/70 mb-2 md:mb-0 items-center">
+            <a href="mailto:juliana@zarosassessoriacontabil.com.br" className="flex items-center hover:text-primary transition-colors duration-300 mb-1 md:mb-0">
               <Mail size={16} className="mr-2" />
-              contato@contabilidade.com
+              juliana@zarosassessoriacontabil.com.br
             </a>
-            <a href="tel:+5511987654321" className="flex items-center hover:text-amber-500 transition-colors duration-300 whitespace-nowrap">
+            <a href="tel:+5544999677837" className="flex items-center hover:text-primary transition-colors duration-300 whitespace-nowrap">
               <Phone size={16} className="mr-2" />
-              (11) 98765-4321
+              (44) 99967-7837
             </a>
           </div>
           
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              <Facebook size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
+            <a href="https://www.instagram.com/zarosassessoriacontabil?igsh=ZjloZnI2dGc4NmV0" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="text-foreground/60 hover:text-primary transition-colors duration-300">
               <Instagram size={18} />
             </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              <Twitter size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              <Linkedin size={18} />
+            <a href="https://wa.me/5544999677837" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="text-foreground/60 hover:text-primary transition-colors duration-300">
+              <MessageCircle size={18} />
             </a>
           </div>
         </div>
@@ -65,15 +65,17 @@ const Header = () => {
         {/* Main Navigation */}
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-semibold text-amber-500 transition-all duration-300 transform hover:scale-[1.02]">
-            ContaPlus
+          <Link to="/" className="text-2xl font-bold text-primary transition-all duration-300 transform hover:scale-[1.02]">
+            ZAROS
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-1">
             <Link to="/" className="nav-link">Início</Link>
-            <a href="#about" className="nav-link">Sobre Nós</a>
+            <a href="#about" className="nav-link">Sobre</a>
             <a href="#services" className="nav-link">Serviços</a>
+            <a href="#plans" className="nav-link">Planos</a>
+            <a href="#testimonials" className="nav-link">Depoimentos</a>
             <a href="#contact" className="nav-link">Contato</a>
           </nav>
           
@@ -90,10 +92,12 @@ const Header = () => {
       {/* Mobile Navigation Menu */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
         <div className="container-custom py-4 flex flex-col space-y-3 border-t mt-4">
-          <Link to="/" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Início</Link>
-          <a href="#about" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Sobre Nós</a>
-          <a href="#services" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Serviços</a>
-          <a href="#contact" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Contato</a>
+          <Link to="/" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Início</Link>
+          <a href="#about" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Sobre</a>
+          <a href="#services" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Serviços</a>
+          <a href="#plans" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Planos</a>
+          <a href="#testimonials" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Depoimentos</a>
+          <a href="#contact" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Contato</a>
         </div>
       </div>
     </header>

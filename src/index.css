@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,47 +8,54 @@
 
 @layer base {
   :root {
-    /* Base color (60%): Dark neutral/black */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-
-    --card: 0 0% 98%;
-    --card-foreground: 240 10% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
-    /* Primary (30%): Gold/Amber */
-    --primary: 43 74% 49%; /* Gold */
-    --primary-foreground: 240 5.9% 10%;
-
-    --secondary: 0 0% 98%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-
-    /* Accent (10%): Darker gold */
-    --accent: 43 100% 33%; /* Darker gold */
-    --accent-foreground: 0 0% 98%;
-
+    /* ZAROS Brand Colors - Paleta nude, preto, branco, bege */
+    --nude: 37 20% 94%; /* #F7F2EF */
+    --beige: 30 35% 72%; /* #EBCBAF */
+    --bronze: 20 38% 53%; /* #BC7E53 */
+    --black: 0 0% 0%; /* #000000 */
+    --white: 0 0% 100%;
+    
+    /* Semantic tokens - 60/30/10 rule */
+    --background: var(--nude); /* 60% - Background principal */
+    --foreground: var(--black);
+    
+    --card: var(--white);
+    --card-foreground: var(--black);
+    
+    --popover: var(--white);
+    --popover-foreground: var(--black);
+    
+    /* Primary (30%) - Cor primária da logo */
+    --primary: var(--bronze);
+    --primary-foreground: var(--white);
+    
+    --secondary: var(--beige);
+    --secondary-foreground: var(--black);
+    
+    --muted: var(--beige);
+    --muted-foreground: var(--black);
+    
+    /* Accent (10%) - Cor de destaque */
+    --accent: var(--nude);
+    --accent-foreground: var(--black);
+    
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 43 74% 49%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: var(--white);
+    
+    --border: var(--beige);
+    --input: var(--white);
+    --ring: var(--bronze);
+    
+    --radius: 0.75rem;
+    
+    --sidebar-background: var(--white);
+    --sidebar-foreground: var(--black);
+    --sidebar-primary: var(--bronze);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: var(--nude);
+    --sidebar-accent-foreground: var(--black);
+    --sidebar-border: var(--beige);
+    --sidebar-ring: var(--bronze);
   }
 
   .dark {
@@ -102,6 +110,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-medium tracking-tight;
+    font-family: 'Playfair Display', serif;
   }
   
   /* Glass effect */
@@ -114,13 +123,13 @@
     scroll-behavior: smooth;
   }
   
-  /* Buttons with hover effect */
+  /* Buttons with ZAROS brand styling */
   .btn-primary {
-    @apply bg-black hover:bg-neutral-900 text-amber-400 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-lg hover:shadow-xl font-medium;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-black border border-amber-400/20 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
+    @apply bg-transparent hover:bg-primary/10 text-primary border-2 border-primary px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 font-medium;
   }
   
   /* Card hover effects */
@@ -138,9 +147,9 @@
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
   
-  /* Navigation link hover effect */
+  /* Navigation link with ZAROS styling */
   .nav-link {
-    @apply relative py-2 px-3 text-gray-700 hover:text-amber-500 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative py-3 px-4 text-foreground/80 hover:text-primary transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full font-medium;
   }
   
   /* Image hover effect */
