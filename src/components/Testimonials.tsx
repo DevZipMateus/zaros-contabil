@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, ArrowLeft, ArrowRight } from 'lucide-react';
 
 const testimonials = [
@@ -8,29 +8,35 @@ const testimonials = [
     name: 'Elina Santos',
     position: 'Diretora da BJT Transportadora',
     content: 'A ContaPlus tem se mostrado extremamente pontual na entrega de documentos e o suporte é sempre atencioso. Recomendo a todos que procuram um serviço contábil confiável.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   },
   {
     id: 2,
     name: 'Joel Gomes',
     position: 'Administrador da Torque Implementos',
     content: 'O comprometimento da equipe da ContaPlus com a satisfação do cliente é notável. Eles sempre atendem às necessidades da nossa empresa com excelência e profissionalismo.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   },
   {
     id: 3,
     name: 'João Meneses',
     position: 'Diretor da Ágil Mecânica',
     content: 'O atendimento da ContaPlus é prestativo, sempre esclarecendo nossas dúvidas. Os serviços prestados são excelentes e nos ajudam a manter nosso negócio em ordem.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   }
 ];
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   
   const nextTestimonial = () => {
     setActiveIndex((prev) => (prev + 1) % testimonials.length);
@@ -67,32 +73,23 @@ const Testimonials = () => {
             <div className="absolute -top-6 left-8 text-6xl text-primary/20">"</div>
             
             {/* Content */}
-            <div className="flex flex-col md:flex-row gap-8">
-              {/* Avatar */}
-              <div className="md:w-1/4 flex flex-col items-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-4">
-                  <img 
-                    src={testimonials[activeIndex].image} 
-                    alt={testimonials[activeIndex].name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 className="text-lg font-semibold text-card-foreground text-center">{testimonials[activeIndex].name}</h4>
-                <p className="text-sm text-muted-foreground text-center">{testimonials[activeIndex].position}</p>
+            <div className="text-center">
+              {/* Testimonial Text */}
+              <p className="text-muted-foreground text-lg italic mb-8">
+                "{testimonials[activeIndex].content}"
+              </p>
+              
+              {/* Author Info */}
+              <div className="flex flex-col items-center">
+                <h4 className="text-lg font-semibold text-card-foreground">{testimonials[activeIndex].name}</h4>
+                <p className="text-sm text-muted-foreground mb-2">{testimonials[activeIndex].position}</p>
                 
                 {/* Rating */}
-                <div className="flex justify-center mt-2">
+                <div className="flex justify-center">
                   {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
                     <Star key={i} className="text-yellow-400 fill-current" size={16} />
                   ))}
                 </div>
-              </div>
-              
-              {/* Testimonial Text */}
-              <div className="md:w-3/4">
-                <p className="text-muted-foreground text-lg italic mb-6">
-                  "{testimonials[activeIndex].content}"
-                </p>
               </div>
             </div>
           </div>
