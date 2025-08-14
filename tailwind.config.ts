@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'garamond': ['Garamond', 'EB Garamond', 'Times New Roman', 'serif'],
+				'kassan': ['Kassan', 'serif'],
 				'sans': ['Inter', 'sans-serif'],
 			},
 			colors: {
