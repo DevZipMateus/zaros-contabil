@@ -56,7 +56,7 @@ const Services = () => {
           <div className="inline-block bg-primary/10 text-primary font-medium px-6 py-2 rounded-full text-sm mb-6">
             Nossos Serviços
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-kassan text-foreground mb-6">
             Soluções Completas em Contabilidade
           </h2>
           <p className="text-foreground/80 text-xl leading-relaxed">
@@ -76,7 +76,7 @@ const Services = () => {
               <div className="bg-primary/10 p-4 rounded-xl inline-block mb-6 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="text-primary" size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-foreground leading-tight">{service.title}</h3>
+              <h3 className="text-xl font-bold font-kassan mb-4 text-foreground leading-tight">{service.title}</h3>
               <p className="text-foreground/70 leading-relaxed">{service.description}</p>
             </div>
           ))}

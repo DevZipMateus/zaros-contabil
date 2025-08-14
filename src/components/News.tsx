@@ -38,7 +38,7 @@ const News = () => {
           <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-4 py-1.5 rounded-full text-sm mb-4">
             Notícias e Artigos
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-kassan text-gray-900 mb-6">
             Fique atualizado com o mercado
           </h2>
           <p className="text-gray-600 text-lg">
@@ -72,7 +72,7 @@ const News = () => {
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 hover:text-corporate-blue transition-colors duration-300">
+                <h3 className="text-xl font-semibold font-kassan text-gray-900 mb-3 hover:text-corporate-blue transition-colors duration-300">
                   <a href="#">{article.title}</a>
                 </h3>
                 
