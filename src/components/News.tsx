@@ -38,7 +38,7 @@ const News = () => {
           <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-4 py-1.5 rounded-full text-sm mb-4">
             Notícias e Artigos
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold font-kassan text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-philosopher text-gray-900 mb-6">
             Fique atualizado com o mercado
           </h2>
           <p className="text-gray-600 text-lg">

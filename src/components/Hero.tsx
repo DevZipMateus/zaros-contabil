@@ -25,7 +25,7 @@ const Hero = () => {
             />
           </div>
           
-          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-brand font-bold text-foreground leading-tight mb-6 animate-fade-in`} 
+          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-philosopher font-bold text-foreground leading-tight mb-6 animate-fade-in`} 
               style={{ animationDelay: '0.1s' }}>
             MAIS QUE NÚMEROS,<br />
             <span className="text-primary">SOLUÇÕES EFICAZ EM CONTABILIDADE</span>

@@ -56,7 +56,7 @@ const Services = () => {
           <div className="inline-block bg-primary/10 text-primary font-medium px-6 py-2 rounded-full text-sm mb-6">
             Nossos Serviços
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold font-kassan text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-philosopher text-foreground mb-6">
             Soluções Completas em Contabilidade
           </h2>
           <p className="text-foreground/80 text-xl leading-relaxed">

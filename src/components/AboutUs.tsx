@@ -11,7 +11,7 @@ const AboutUs = () => {
           <div className="inline-block bg-primary/10 text-primary font-medium px-6 py-2 rounded-full text-sm mb-6 font-heading">
             Sobre a ZAROS
           </div>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-philosopher font-bold text-foreground mb-6">
             Excelência e Confiança em Contabilidade
           </h2>
           <p className="text-foreground/80 text-xl leading-relaxed font-body">

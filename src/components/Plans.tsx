@@ -2,6 +2,7 @@ import React from 'react';
 import { Check, X } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { cn } from '../lib/utils';
+
 const plans = [{
   id: 1,
   name: 'Plano Essencial',
@@ -102,16 +103,19 @@ const plans = [{
   delay: '0.2s',
   color: 'bg-neutral-50'
 }];
+
 const Plans = () => {
   const isMobile = useIsMobile();
-  return <section id="plans" className="section bg-background">
+  
+  return (
+    <section id="plans" className="section bg-background">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <div className="inline-block bg-primary/10 text-primary font-medium px-4 py-1.5 rounded-full text-sm mb-4">
             Nossos Planos
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-philosopher text-foreground mb-6">
             Escolha o plano ideal para o seu negócio
           </h2>
           <p className="text-muted-foreground text-lg">
@@ -180,6 +184,8 @@ const Plans = () => {
           </a>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Plans;

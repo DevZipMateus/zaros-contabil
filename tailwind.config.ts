@@ -23,6 +23,7 @@ export default {
 				'heading': ['Montserrat', 'system-ui', 'sans-serif'], // Para cabeçalhos
 				'body': ['Poppins', 'system-ui', 'sans-serif'], // Para corpo do texto
 				'sans': ['Poppins', 'system-ui', 'sans-serif'], // Default sans
+				'philosopher': ['Philosopher', 'serif'], // Para títulos de seção
 			},
 			colors: {
 				border: 'hsl(var(--border))',
