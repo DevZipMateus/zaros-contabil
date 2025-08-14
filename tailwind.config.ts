@@ -20,6 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'kassan': ['Kassan', 'serif'],
+				'luxury': ['Playfair Display', 'serif'],
 				'sans': ['Inter', 'sans-serif'],
 			},
 			colors: {
