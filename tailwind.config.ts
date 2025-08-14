@@ -19,9 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'kassan': ['Kassan', 'serif'],
-				'luxury': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'sans-serif'],
+				'brand': ['Montserrat', 'system-ui', 'sans-serif'], // Para títulos e elementos da marca
+				'heading': ['Montserrat', 'system-ui', 'sans-serif'], // Para cabeçalhos
+				'body': ['Poppins', 'system-ui', 'sans-serif'], // Para corpo do texto
+				'sans': ['Poppins', 'system-ui', 'sans-serif'], // Default sans
 			},
 			colors: {
 				border: 'hsl(var(--border))',

@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kassan:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -106,12 +107,44 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-medium tracking-tight font-kassan;
+  /* Hierarquia tipográfica moderna similar à logo */
+  h1 {
+    @apply font-bold tracking-tight;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+  
+  h2 {
+    @apply font-bold tracking-tight;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  h3 {
+    @apply font-semibold tracking-tight;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+  
+  h4, h5, h6 {
+    @apply font-medium tracking-tight;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  
+  p {
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 400;
   }
   
   /* Glass effect */
@@ -124,13 +157,19 @@
     scroll-behavior: smooth;
   }
   
-  /* Buttons with ZAROS brand styling */
+  /* Buttons com tipografia moderna */
   .btn-primary {
     @apply bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-lg hover:shadow-xl font-medium;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
   
   .btn-secondary {
     @apply bg-transparent hover:bg-primary/10 text-primary border-2 border-primary px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50 font-medium;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
   
   /* Card hover effects */
@@ -148,9 +187,12 @@
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
   
-  /* Navigation link with ZAROS styling */
+  /* Navigation link com tipografia moderna */
   .nav-link {
     @apply relative py-3 px-4 text-foreground/80 hover:text-primary transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full font-medium;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
   
   /* Image hover effect */

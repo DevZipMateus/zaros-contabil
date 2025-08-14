@@ -14,9 +14,9 @@ const EgestorERP = () => {
           {/* Left column - Header Text */}
           <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 animate-fade-in">
             <a href={egestorLink} target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-90 transition-opacity">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-kassan text-gray-800 mb-4 leading-tight">Sistema de gestão empresarial</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-gray-800 mb-4 leading-tight">Sistema de gestão empresarial</h2>
             </a>
-            <p className="text-lg md:text-xl text-gray-600 font-normal">
+            <p className="text-lg md:text-xl text-gray-600 font-body">
               Dobre seus lucros otimizando sua gestão
             </p>
           </div>
@@ -33,7 +33,7 @@ const EgestorERP = () => {
         {/* CTA Button - Centered below both columns */}
         <div className="flex justify-center animate-fade-in">
           <a href={egestorLink} target="_blank" rel="noopener noreferrer" className="inline-block w-full max-w-sm">
-            <button className="w-full py-3 bg-[#7CFFA0] hover:bg-[#6DF090] text-black font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02]">
+            <button className="w-full py-3 bg-[#7CFFA0] hover:bg-[#6DF090] text-black font-heading font-medium rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02]">
               Teste grátis
             </button>
           </a>

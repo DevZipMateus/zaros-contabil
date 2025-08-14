@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 
@@ -24,18 +25,18 @@ const Hero = () => {
             />
           </div>
           
-          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold font-luxury text-foreground leading-tight mb-6 animate-fade-in`} 
+          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-brand font-bold text-foreground leading-tight mb-6 animate-fade-in`} 
               style={{ animationDelay: '0.1s' }}>
             MAIS QUE NÚMEROS,<br />
             <span className="text-primary">SOLUÇÕES EFICAZ EM CONTABILIDADE</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in font-light" 
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in font-body font-light" 
              style={{ animationDelay: '0.2s' }}>
             Assessoria completa para o sucesso do seu negócio
           </p>
           
-          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" 
+          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in font-body" 
              style={{ animationDelay: '0.3s' }}>
             Somos especialistas em contabilidade, fiscal, tributário e gestão empresarial, 
             oferecendo soluções personalizadas para cada tipo de empreendimento.
@@ -69,4 +70,5 @@ const Hero = () => {
     </section>
   );
 };
+
 export default Hero;

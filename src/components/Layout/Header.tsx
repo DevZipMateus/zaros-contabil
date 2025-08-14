@@ -34,7 +34,7 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
           {/* Contact Information */}
-          <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-foreground/70 mb-2 md:mb-0 items-center">
+          <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-foreground/70 mb-2 md:mb-0 items-center font-body">
             <a href="mailto:juliana@zarosassessoriacontabil.com.br" className="flex items-center hover:text-primary transition-colors duration-300 mb-1 md:mb-0">
               <Mail size={16} className="mr-2" />
               juliana@zarosassessoriacontabil.com.br
@@ -65,7 +65,7 @@ const Header = () => {
         {/* Main Navigation */}
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-primary transition-all duration-300 transform hover:scale-[1.02]">
+          <Link to="/" className="text-2xl font-brand font-bold text-primary transition-all duration-300 transform hover:scale-[1.02]">
             ZAROS
           </Link>
           
@@ -92,12 +92,12 @@ const Header = () => {
       {/* Mobile Navigation Menu */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out bg-background`}>
         <div className="container-custom py-4 flex flex-col space-y-3 border-t border-border mt-4">
-          <Link to="/" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Início</Link>
-          <a href="#about" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Sobre</a>
-          <a href="#services" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Serviços</a>
-          <a href="#plans" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Planos</a>
-          <a href="#testimonials" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Depoimentos</a>
-          <a href="#contact" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors" onClick={toggleMobileMenu}>Contato</a>
+          <Link to="/" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors font-heading" onClick={toggleMobileMenu}>Início</Link>
+          <a href="#about" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors font-heading" onClick={toggleMobileMenu}>Sobre</a>
+          <a href="#services" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors font-heading" onClick={toggleMobileMenu}>Serviços</a>
+          <a href="#plans" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors font-heading" onClick={toggleMobileMenu}>Planos</a>
+          <a href="#testimonials" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors font-heading" onClick={toggleMobileMenu}>Depoimentos</a>
+          <a href="#contact" className="px-4 py-2 text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors font-heading" onClick={toggleMobileMenu}>Contato</a>
         </div>
       </div>
     </header>
