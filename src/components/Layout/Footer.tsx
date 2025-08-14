@@ -13,11 +13,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Phone className="mr-3 mt-1 flex-shrink-0" size={18} />
-                <span>(11) 98765-4321</span>
+                <span>(44) 99967-7837</span>
               </li>
               <li className="flex items-start">
                 <Mail className="mr-3 mt-1 flex-shrink-0" size={18} />
-                <span>contato@contabilidade.com</span>
+                <span>juliana@zarosassessoriacontabil.com.br</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="mr-3 mt-1 flex-shrink-0" size={18} />
@@ -67,7 +67,7 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-sm text-white/70">
-          <p>© {new Date().getFullYear()} ContaPlus. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} ZAROS Assessoria Contábil. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
